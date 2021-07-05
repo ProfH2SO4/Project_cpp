@@ -24,6 +24,7 @@ void mainWindow::create_buttons(){
 
 void mainWindow::on_quit_button_clicked() {
    p_quitWindow = new quitWindow(this);
+   p_quitWindow->resize(300,150);
    p_quitWindow->show();
 }
 
