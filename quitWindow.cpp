@@ -2,7 +2,6 @@
 
 #include "quitWindow.h"
 #include <QObject>
-#include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
 #include "iostream"
 
@@ -36,7 +35,6 @@ void quitWindow::create_buttons(QWidget *parent) {
 }
 
 void quitWindow::write_text() {
-    //QLabel *label = new QLabel(this);
     label->setText("Are you really want to quit?");
     label->show();
 }
@@ -46,19 +44,20 @@ void quitWindow::getWindowSize() {
     int width = this->width();
     cout << height << " " << width << endl;
 }
-// moveEvent can resize only from top and left!
+
+/**
+ * note: moveEvent can resize only from top and left!
+ * @param e widget resize events are passed to e parameter
+ * when resizeEvent is called, the widget already has its own geometry
+ */
 void quitWindow::resizeEvent(QResizeEvent* e)
 {
     int window_width = quitWindow::size().width();
     int window_height = quitWindow::size().height();
 
-//    int widget_height = widget->size().height();
-//    int widget_width = widget->size().width();
     int widget_w = abs(50-window_width/8);
     int widget_h = abs(50-window_height/8);
 
-//    int h_button = cancel_button->height();
-//    int w_button = cancel_button->width();
     widget->resize(window_width, window_height);
     widget->move(widget_w, widget_h);
 

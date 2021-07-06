@@ -14,17 +14,14 @@ class quitWindow : public QDialog {
 public:
     explicit quitWindow(QWidget *parent ); // pass not 0 means has parent
 
-    // ~mainWindow();
-private:
 
+private:
     QWidget * widget = new QWidget(this);
     QLabel *label = new QLabel(widget);
     void create_buttons(QWidget *parent);
     void write_text();
     void getWindowSize();
     void resizeEvent(QResizeEvent *e);
-//private slots:
-//    void close_all_windows();
 
 
 };
