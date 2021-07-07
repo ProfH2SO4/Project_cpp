@@ -19,8 +19,9 @@ public:
     explicit playWindow(QWidget *parent = nullptr); // no parent
 
 private:
-    QMenu *menu;
-    QLabel *infoLabel;
+    QMenu *file_menu;
+    QMenu *edit_menu;
+    QMenu *help_menu;
 
     void setupMenuBar();
     void setupToolBar();

@@ -33,7 +33,7 @@ void mainWindow::create_buttons(){
 }
 
 void mainWindow::on_play_button_clicked(){
-    this->hide(); // hide menu window
+    this->hide(); // hide file_menu window
     //playWindow *play_Window ;
     p_playWindow = new playWindow();
 
