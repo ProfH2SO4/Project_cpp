@@ -1,6 +1,6 @@
 
 #include "mainWindow.h"
-
+#include <QDialog>
 mainWindow::mainWindow(QWidget *parent) {
     QMainWindow();
 
@@ -10,7 +10,7 @@ mainWindow::mainWindow(QWidget *parent) {
 
 mainWindow::~mainWindow(){
     delete p_quitWindow;
-    delete p_playWindow;
+    //delete p_playWindow;
 }
 
 void mainWindow::create_buttons(){
@@ -34,7 +34,9 @@ void mainWindow::create_buttons(){
 
 void mainWindow::on_play_button_clicked(){
     this->hide(); // hide menu window
-    p_playWindow = new playWindow(this);
+    //playWindow *play_Window ;
+    p_playWindow = new playWindow();
+
     p_playWindow->resize(500, 500);
     p_playWindow->show();
 
@@ -45,6 +47,7 @@ void mainWindow::on_quit_button_clicked() {
    p_quitWindow->resize(300,150);
    p_quitWindow->show();
 }
+
 
 
 

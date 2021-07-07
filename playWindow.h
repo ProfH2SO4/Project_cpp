@@ -7,13 +7,24 @@
 #include<QObject>
 #include <QWindow>
 #include <QtWidgets/QLabel>
+#include <QMenu>
+#include <QMenuBar>
+#include <QToolBar>
+#include <QMainWindow>
 
-class playWindow : public QWidget {
+class playWindow : public QMainWindow {
     Q_OBJECT
 
 public:
-    explicit playWindow(QWidget *parent); // pass not 0 means has parent
+    explicit playWindow(QWidget *parent = nullptr); // no parent
 
+private:
+    QMenu *menu;
+    QLabel *infoLabel;
+
+    void setupMenuBar();
+    void setupToolBar();
+    void createActions();
 
 
 };

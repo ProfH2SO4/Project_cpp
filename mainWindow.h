@@ -25,5 +25,6 @@ private slots:
     void on_quit_button_clicked();
     void on_play_button_clicked();
 
+
 };
 #endif //PROJECT_CPP_MAINWINDOW_H
